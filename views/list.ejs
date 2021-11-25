@@ -1,0 +1,53 @@
+<%- include("header") -%>
+  
+  
+  
+  
+  <div class="box" id="heading">
+
+        <h1><%= kindOfDay%></h1>
+    
+    </div>
+
+    <div class="box">
+
+        <% for(var i = 0 ; i< newListItems.length; i++){ %>
+
+        <div class="item">
+                <input type="checkbox">
+                 <p style="color:green"><%= newListItems[i]%></p>
+            
+            </div>
+        <% } %>
+
+        <form action="/" method="post">
+            <input type="text" name="newItem" id="" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button" > + </button>
+        </form>
+
+    </div>
+
+   
+
+   
+    
+
+  <!-- <%  if(kindOfDay === "Saturday") { %>
+        <h1 style="color:purple">  <%= kindOfDay %> ToDo List</h1>
+  <%  }  else if (kindOfDay === "Sunday"){ %>
+        <h1 style="color:blue"> <%= kindOfDay %> ToDo List</h1>
+  <% } else if(kindOfDay === "Monday") { %>
+    <h1 style="color:skyblue">  <%= kindOfDay %> ToDo List</h1>
+  <%  }  else if (kindOfDay === "Tuesday"){ %>
+    <h1 style="color:green"> <%= kindOfDay %> ToDo List</h1>
+  <% } else if(kindOfDay === "Wednesday") { %>
+    <h1 style="color:yellow">  <%= kindOfDay %> ToDo List</h1>
+  <%  }  else if (kindOfDay === "Thursday"){ %>
+    <h1 style="color:orange"> <%= kindOfDay %> ToDo List</h1>
+  <%  }  else if (kindOfDay === "Friday"){ %>
+    <h1 style="color:red"> <%= kindOfDay %> ToDo List</h1>
+  <%  }  else{ %>
+    <h1 style="color:tomato"> <%= kindOfDay %> ToDo List</h1>
+<% } %> -->
+
+<%- include("footer") -%>
