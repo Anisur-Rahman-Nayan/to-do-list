@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine', 'ejs');
 app.use(express.static("Public"))
 
-const port = 3000
+const port = process.env.PORT || 3000;
 
 var items = [];
 
